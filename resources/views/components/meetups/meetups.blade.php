@@ -1,4 +1,4 @@
-<main class="w-1/2 m-auto mt-5 pb-10">
+<main class="w-1/2 m-auto pb-5">
     <x-container>
         <x-card>
             <div class="w-full h-80 overflow-hidden">
@@ -21,4 +21,3 @@
         </x-card>
     </x-container>
 </main>
-
