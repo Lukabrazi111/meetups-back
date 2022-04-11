@@ -16,5 +16,5 @@
         </x-container>
     </header>
 
-    <x-meetups.meetups/>
+    <x-meetups.meetup-form/>
 </x-layout>

@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('meetup');
 });
+
+Route::get('/new-meetup', function() {
+    return view('new-meetup');
+});
