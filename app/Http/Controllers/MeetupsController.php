@@ -14,7 +14,9 @@ class MeetupsController extends Controller
      */
     public function index()
     {
-        return view('meetup');
+        $meetups = Meetups::orderBy('id', 'desc')->get();
+
+        return view('meetup', ['meetups' => $meetups]);
     }
 
     public function newMeetupPage()

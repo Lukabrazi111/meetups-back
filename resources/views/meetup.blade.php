@@ -16,7 +16,7 @@
         </x-container>
     </header>
 
-    <x-meetups.meetups/>
+    <x-meetups.meetups :meetups="$meetups"/>
 
     @if(session()->has('success'))
         <div
@@ -24,4 +24,5 @@
             {{ session()->get('success') }}
         </div>
     @endif
+
 </x-layout>

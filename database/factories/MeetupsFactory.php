@@ -17,9 +17,9 @@ class MeetupsFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->title,
+            'title' => $this->faker->text(25),
             'address' => $this->faker->address,
-            'image' => $this->faker->url,
+            'image' => $this->faker->imageUrl,
             'description' => $this->faker->text,
         ];
     }
