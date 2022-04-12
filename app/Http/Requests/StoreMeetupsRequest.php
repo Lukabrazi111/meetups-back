@@ -13,7 +13,7 @@ class StoreMeetupsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class StoreMeetupsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|min:3',
+            'image' => 'required|url',
+            'address' => 'required',
+            'description' => 'required|min:3|max:255',
         ];
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MeetupsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('meetup');
-});
+Route::get('/', [MeetupsController::class, 'index'])->name('index');
 
-Route::get('/new-meetup', function() {
-    return view('new-meetup');
-});
+Route::get('/new-meetup', [MeetupsController::class, 'newMeetupPage'])->name('new-meetup');
+Route::post('/new-meetup', [MeetupsController::class, 'store'])->name('new-meetup.post');
