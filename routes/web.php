@@ -15,6 +15,8 @@ use App\Http\Controllers\MeetupsController;
 */
 
 Route::get('/', [MeetupsController::class, 'index'])->name('index');
+Route::get('/meetup/{id}', [MeetupsController::class, 'show'])->name('meetups.show');
 
 Route::get('/new-meetup', [MeetupsController::class, 'newMeetupPage'])->name('new-meetup');
 Route::post('/new-meetup', [MeetupsController::class, 'store'])->name('new-meetup.post');
+

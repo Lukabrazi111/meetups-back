@@ -59,18 +59,18 @@ class MeetupsController extends Controller
      * Display the specified resource.
      *
      * @param \App\Models\Meetups $meetups
-     * @return \Illuminate\Http\Response
      */
-    public function show(Meetups $meetups)
+    public function show(Meetups $meetups, $id)
     {
-        //
+        $meetup = $meetups::find($id);
+
+        return view('components.meetups.meetup-detail', ['meetup' => $meetup]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param \App\Models\Meetups $meetups
-     * @return \Illuminate\Http\Response
      */
     public function edit(Meetups $meetups)
     {

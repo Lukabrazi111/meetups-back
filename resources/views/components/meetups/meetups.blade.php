@@ -13,10 +13,10 @@
                     <h1 class="font-bold text-gray-700">{{ $meetup->title }}</h1>
                     <p class="italic">{{ $meetup->address }}</p>
 
-                    <button type="button"
-                            class="px-4 py-2 border border-main rounded transition-colors hover:text-white hover:bg-main">
-                        Show Details
-                    </button>
+                    <div class="pt-2">
+                        <a class="px-4 py-2 border border-main rounded transition-colors hover:text-white hover:bg-main"
+                           href={{ route('meetups.show', $meetup->id) }}>Show Details</a>
+                    </div>
                 </div>
             </x-card>
         @endforeach
