@@ -13,6 +13,11 @@ class MeetupsController extends Controller
         return Meetups::orderBy('id', 'desc')->get();
     }
 
+    public function getSpecificMeetup($id)
+    {
+        return Meetups::find($id);
+    }
+
     /**
      * Display a listing of the resource.
      *

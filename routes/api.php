@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/meetups', [MeetupsController::class, 'getAllMeetups']);
+Route::get('/meetups/{id}', [MeetupsController::class, 'getSpecificMeetup']);
