@@ -8,6 +8,11 @@ use App\Models\Meetups;
 
 class MeetupsController extends Controller
 {
+    public function getAllMeetups()
+    {
+        return Meetups::orderBy('id', 'desc')->get();
+    }
+
     /**
      * Display a listing of the resource.
      *
