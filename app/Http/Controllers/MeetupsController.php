@@ -60,9 +60,11 @@ class MeetupsController extends Controller
             'description' => $request->description,
         ]);
 
-        session()->flash('success', 'You added meetup successfully!');
+//        session()->flash('success', 'You added meetup successfully!');
 
-        return redirect()->route('index');
+        return response()->json([
+            'message' => 'You added meetup successfully!',
+        ]);
     }
 
     /**
